@@ -1,3 +1,5 @@
+@import '~antd/dist/antd.css';
+
 .App {
   text-align: center;
 }
@@ -27,7 +29,10 @@
 .App-link {
   color: #61dafb;
 }
-
+.switch-wrapper > div {
+  position: absolute;
+  width: 100vw;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
