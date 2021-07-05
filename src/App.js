@@ -6,12 +6,13 @@ import { BrowserRouter, Route, Redirect } from 'react-router-dom'
 import { AnimatedSwitch } from 'react-router-transition'
 import logo from './assets/logo.png'
 import Home from './pages/home'
+import News from './pages/news'
 import NoMatch from './pages/NoMatch'
 import { request } from '_helpers/request'
-import { createBrowserHistory } from 'history'
+import { useHistory } from 'react-router-dom'
 
-const history = createBrowserHistory()
 const { SubMenu } = Menu;
+const scrollList = ['hoat-dong', 'nghien-cuu-dao-tao', 'lien-he']
 
 function mapStyles(styles) {
   return {
@@ -20,46 +21,19 @@ function mapStyles(styles) {
   };
 }
 function App() {
-  const [key, setKey] = useState('home')
+  // const [key, setKey] = useState('home')
   const [menus, setMenus] = useState([])
-  function handleClick() {
-
-  }
   useEffect(() => {
     request.get('/Menu')
     .then(res => {
       setMenus(res)
     })
   }, [])
+
+
   return (
     <div className="App">
-      <Menu onClick={handleClick} selectedKeys={['home']} mode="horizontal" style={{ position: 'sticky', top: 0 }}>
-          <Menu.Item key='logo' icon={<img style={{ maxWidth: '50px' }} src={logo} alt='logo' />} style={{ background: 'yellow' }}>
-            <b>BỘ Y TẾ - CỤC QUẢN LÝ Y, DƯỢC CỔ TRUYỀN</b>
-          </Menu.Item>
-          <Menu.Item key="home">
-            Trang chủ
-          </Menu.Item>
-          {
-            menus.map((e) => {
-              if (e.submenu && e.submenu.length > 0) {
-                return (
-                  <SubMenu key={e.urlName} title={e.name} onTitleClick={() => history.push(e.urlName)}>
-                    {
-                      e.submenu.map((sub) => <Menu.Item key={sub.urlName} onClick={() => history.push(sub.urlName)}>{sub.displayName}</Menu.Item>)
-                    }
-                  </SubMenu>
-                )
-              }
-              return (
-                <Menu.Item key={e.urlName} onClick={() => history.push(e.urlName)}>
-                  {e.name}
-                </Menu.Item>
-              )
-            })
-          }
 
-        </Menu>
       <BrowserRouter>
           <AnimatedSwitch
             atEnter={{ opacity: 0 }}
@@ -68,8 +42,14 @@ function App() {
             mapStyles={mapStyles}
             className="switch-wrapper"
           >
-            <Route exact path="/home-page" name="Home" component={Home} />
-            <Redirect to="/home-page" />
+
+            <Route exact path="/" name="Home" render={(props) => (
+              <Header menus={menus} computedMatch={props.computedMatch}><Home menus={menus} /></Header>
+            )} />
+            <Route exact path="/:category" name="News" render={(props) => (
+              <Header menus={menus} {...props}><News menus={menus} {...props} /></Header>
+            )} />
+            <Redirect to="/" />
             <Route component={NoMatch} />
           </AnimatedSwitch>
       </BrowserRouter>
@@ -78,4 +58,61 @@ function App() {
   );
 }
 
+function Header({ menus, children, match }) {
+  const history = useHistory()
+
+  function navi(obj) {
+    debugger
+    if (scrollList.indexOf(obj.urlName) > -1) {
+      document.querySelector(`#${obj.urlName}`).scrollIntoView({
+          behavior: 'smooth',
+      })
+    } else {
+      history.push({
+        pathname: obj.urlName,
+        state: {
+          displayName: obj.displayName
+        }
+      })
+    }
+  }
+  function handleClick() {
+
+  }
+  return (
+    <React.Fragment>
+      <Menu onClick={handleClick} selectedKeys={[match?.params?.category || 'home']} mode="horizontal">
+          <Menu.Item onClick={() => history.push('/')} key='logo' icon={<img style={{ maxWidth: '50px' }} src={logo} alt='logo' />} style={{ background: 'yellow' }}>
+            <b>CỤC QUẢN LÝ Y, DƯỢC CỔ TRUYỀN</b>
+          </Menu.Item>
+          <Menu.Item key="home" onClick={() => history.push('/')}>
+            Trang chủ
+          </Menu.Item>
+          {
+            menus.map((e) => {
+              if (e.submenu && e.submenu.length > 0) {
+                return (
+                  <SubMenu key={e.urlName} title={e.name} onTitleClick={() => navi(e.urlName)}>
+                    {
+                      e.submenu.map((sub) => <Menu.Item key={sub.urlName} onClick={() => navi(sub)}>{sub.displayName}</Menu.Item>)
+                    }
+                  </SubMenu>
+                )
+              }
+              return (
+                <Menu.Item key={e.urlName} onClick={() => navi(e)}>
+                  {e.name}
+                </Menu.Item>
+              )
+            })
+          }
+
+        </Menu>
+      {
+        children
+      }
+      </React.Fragment>
+  )
+}
+//
 export default App;

@@ -6,15 +6,15 @@ import Section4 from './components/section4'
 import Section5 from './components/section5'
 import Section6 from './components/section6'
 
-function Home() {
+function Home(props) {
   return (
     <React.Fragment>
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
-      <Section6 />
+      <Section1 {...props} />
+      <Section2 title='hoat-dong' {...props} />
+      <Section3 {...props} />
+      <Section4 title='nghien-cuu-dao-tao' {...props} />
+      <Section5 {...props} />
+      <Section6 {...props} title='lien-he' />
     </React.Fragment>
   )
 }

@@ -16,6 +16,7 @@
 .section-2 {
   min-height: 100vh;
   background-color: white;
+  max-width: 100%;
 }
 .section-3 {
   min-height: 100vh;
