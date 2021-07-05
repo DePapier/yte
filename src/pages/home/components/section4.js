@@ -1,12 +1,13 @@
 import 'antd/dist/antd.css'
 import React from 'react'
 import { Card, Row, Col, Typography } from 'antd'
-import action from 'assets/action.webp'
+import { useHistory } from 'react-router-dom'
 import './style.css'
 
 const { Title } = Typography
 const { Meta } = Card
 function Section2(props) {
+  const history = useHistory()
   return (
     <div className='section-4'>
       <br />
@@ -28,6 +29,12 @@ function Section2(props) {
                     hoverable
                     style={{ maxWidth: '100%' }}
                     cover={<img alt="example" src={e.urlImage} />}
+                    onClick={() => history.push({
+                      pathname: e.urlName,
+                      state: {
+                        displayName: e.displayName
+                      }
+                    })}
                   >
                     <Meta title={e.displayName} description={e.description} />
                   </Card>

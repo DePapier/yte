@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Card, Row, Col, Typography } from 'antd'
 import { request } from '_helpers/request'
+import Section6 from '../home/components/section6'
 
 function News(props) {
   const [news, setNews] = useState([])
@@ -21,6 +22,10 @@ function News(props) {
       <Col xs={24} md={{ span: 18, offset: 3 }} style={{ textAlign: 'left', marginTop: '10px' }}>
         <Title level={4}>{props?.location?.state?.displayName}</Title>
       </Col>
+      {
+        props?.location?.state?.name &&
+        <Section6 />
+      }
       <Col xs={24} md={{ span: 18, offset: 3 }}>
         <Row glutter={16}>
           {

@@ -62,8 +62,7 @@ function Header({ menus, children, match }) {
   const history = useHistory()
 
   function navi(obj) {
-    debugger
-    if (scrollList.indexOf(obj.urlName) > -1) {
+    if (scrollList.indexOf(obj.urlName) > -1 && document.querySelector(`#${obj.urlName}`)) {
       document.querySelector(`#${obj.urlName}`).scrollIntoView({
           behavior: 'smooth',
       })
@@ -71,7 +70,8 @@ function Header({ menus, children, match }) {
       history.push({
         pathname: obj.urlName,
         state: {
-          displayName: obj.displayName
+          displayName: obj.displayName,
+          name: obj.name
         }
       })
     }
