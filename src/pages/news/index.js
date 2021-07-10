@@ -14,7 +14,7 @@ function News(props) {
   }, [props?.match?.params?.category])
 
   function canDownload(name) {
-    return name.indexOf('.pdf') > -1
+    return name && name.indexOf('.pdf') > -1
   }
   return (
     <Row>
