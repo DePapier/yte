@@ -7,6 +7,7 @@ import { AnimatedSwitch } from 'react-router-transition'
 import logo from './assets/logo.png'
 import Home from './pages/home'
 import Home2 from './pages/home2'
+import Home1 from './pages/home1'
 import Detail from './pages/detail'
 import News from './pages/news'
 import NoMatch from './pages/NoMatch'
@@ -50,6 +51,9 @@ function App() {
             )} />
             <Route exact path="/2" name="Home2" render={(props) => (
               <Header menus={menus} computedMatch={props.computedMatch}><Home2 menus={menus} /></Header>
+            )} />
+            <Route exact path="/1" name="Home1" render={(props) => (
+              <Header menus={menus} computedMatch={props.computedMatch}><Home1 menus={menus} /></Header>
             )} />
             <Route exact path="/2/detail" name="Detail" render={(props) => (
               <Header menus={menus} computedMatch={props.computedMatch}><Detail menus={menus} /></Header>

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Card, Row, Col, Typography } from 'antd'
 import { request } from '_helpers/request'
+import { useHistory } from 'react-router-dom'
 import Section6 from '../home/components/section6'
 
 function News(props) {
   const [news, setNews] = useState([])
+  const history = useHistory()
   const { Title } = Typography
   useEffect(() => {
     request.get(`/News/${props?.match?.params?.category}/1/20`)
@@ -31,7 +33,7 @@ function News(props) {
           {
             news?.results?.map((e) =>
             <Col xs={24} md={24}>
-              <Card title={e.title} extra={<a href="#">Xem thêm</a>} style={{ textAlign: 'left', marginBottom: '10px' }}>
+              <Card title={e.title} extra={<a onClick={() => history.push('/2/detail')}>Xem thêm</a>} style={{ textAlign: 'left', marginBottom: '10px' }}>
                 {
                   !canDownload(e.urlFile) &&
                   <img src={e.urlFile} alt='file' />
