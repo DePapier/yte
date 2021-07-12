@@ -72,10 +72,10 @@ function Home(props) {
           </section>
           <section className='h3-trans-1' id='hot'>
             <Carousel autoplay effect="fade">
-              <Item3 title={'THÔNG BÁO 1'} text={'Cục Quản lý Y, Dược cổ truyền tổ chức Hội thảo khoa học y dược cổ truyền toàn quốc lần thứ Nhất (dự kiến vào tháng 10/2020) và sẽ định kỳ tổ chức hội thảo khoa học hai năm một lần.'} />
-              <Item3 title={'THÔNG BÁO 2'} text={'Một số dược liệu, vị thuốc cổ truyền và cây thuốc trong phòng, chống bệnh viêm đường'}/>
-              <Item3 title={'THÔNG BÁO 3'} text={'Thông báo về việc viết bài Hội thảo khoa học y dược cổ truyền toàn quốc lần thứ Nhất'}/>
-              <Item3 title={'THÔNG BÁO 4'} text={'Thông báo về việc viết bài và tham gia Hội thảo khoa học quốc tế về y dược cổ truyền'}/>
+              <Item3 title={'Thông báo về việc viết bài Hội thảo khoa học y dược cổ truyền toàn quốc lần thứ Nhất'} text={'Cục Quản lý Y, Dược cổ truyền tổ chức Hội thảo khoa học y dược cổ truyền toàn quốc lần thứ Nhất (dự kiến vào tháng 10/2020) và sẽ định kỳ tổ chức hội thảo khoa học hai năm một lần.'} />
+              <Item3 title={'THÔNG BÁO 2'} text={'Các tác giả/nhóm tác giả có báo cáo trình bày tại Hội thảo (xem danh sách cuối trang) chuẩn bị bài trình bày và gửi về ban tổ chức trước ngày 16/10/2020'}/>
+              <Item3 title={'THÔNG BÁO 3'} text={'Để Ban tổ chức chuẩn bị tốt về hậu cần và tài liệu, Cục Quản lý Y, Dược cổ truyền đề nghị các tổ chức, cá nhân đăng ký đại biểu tham dự và gửi về Ban Tổ chức (Cục Quản lý Y, Dược cổ truyền, Bộ Y tế, địa chỉ: 138A, Giảng Võ, Ba Đình, Hà Nội) trước ngày 10/10/2020. Mẫu đăng ký tại Phụ lục và gửi bản mềm theo email: htkh.ydct@gmail.com'}/>
+              <Item3 title={'THÔNG BÁO 4'} text={'Cục quản lý Y, Dược cổ truyền Bộ Y tế trân trọng thông báo về chủ đề của Hội thảo khoa học y, dược cổ truyền toàn quốc lần thứ 2 là: "Y dược cổ truyền kết hợp y dược hiện đại trong điều trị bệnh không lây nhiễm"'}/>
             </Carousel>
           </section>
           <section className='h4-trans' id='news'>
