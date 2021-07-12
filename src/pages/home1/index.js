@@ -17,7 +17,7 @@ function Home(props) {
         <section className='h2-trans'>
           <br />
           <Row gutter={16} >
-            <Col xs={24} md={{ span: 18, offset: 3 }} style={{ background: 'white', paddingBottom: '8px' }}>
+            <Col xs={24} md={{ span: 18, offset: 3 }} style={{ background: 'white', paddingBottom: '8px', boxShadow: '0 10px 10px 0px #8a8484' }}>
               <Divider orientation="left" style={{ borderTopColor: '#85a1b2', borderTopWidth: '3px' }}> TIN CHÍNH </Divider>
               <Row gutter={16}>
                 <Col md={12} style={{ minHeight: '60vh' }}>
@@ -45,13 +45,13 @@ function Home(props) {
 
 
           <Row gutter={16} >
-            <Col xs={24} md={{ span: 18, offset: 3 }} style={{ background: 'white', paddingBottom: '8px' }}>
+            <Col xs={24} md={{ span: 18, offset: 3 }} style={{ background: 'white', paddingBottom: '8px', boxShadow: '0 10px 10px 0px #8a8484' }}>
               <img src={banner} style={{ width: '100%' }} />
             </Col>
           </Row>
 
           <Row gutter={16} >
-            <Col xs={24} md={{ span: 18, offset: 3 }} style={{ background: 'white', paddingBottom: '8px' }}>
+            <Col xs={24} md={{ span: 18, offset: 3 }} style={{ background: 'white', paddingBottom: '8px', boxShadow: '0 10px 10px 0px #8a8484' }}>
               <Divider orientation="left" style={{ borderTopColor: '#85a1b2', borderTopWidth: '3px' }}> Y CỔ TRUYỀN </Divider>
               <Row gutter={16}>
                 <Col xs={24} md={6}>
@@ -102,7 +102,7 @@ function Home(props) {
 
 
           <Row gutter={16} >
-            <Col xs={24} md={{ span: 18, offset: 3 }} style={{ background: 'white', paddingBottom: '8px' }}>
+            <Col xs={24} md={{ span: 18, offset: 3 }} style={{ background: 'white', paddingBottom: '8px', boxShadow: '0 10px 10px 0px #8a8484' }}>
               <Divider orientation="left" style={{ borderTopColor: '#85a1b2', borderTopWidth: '3px' }}> DƯỢC CỔ TRUYỀN </Divider>
               <Row gutter={16}>
                 <Col xs={24} md={6}>
@@ -153,7 +153,7 @@ function Home(props) {
 
 
           <Row gutter={16} >
-            <Col xs={24} md={{ span: 18, offset: 3 }} style={{ background: 'white', paddingBottom: '8px' }}>
+            <Col xs={24} md={{ span: 18, offset: 3 }} style={{ background: 'white', paddingBottom: '8px', boxShadow: '0 10px 10px 0px #8a8484' }}>
               <Divider orientation="left" style={{ borderTopColor: '#85a1b2', borderTopWidth: '3px' }}> HỢP TÁC QUỐC TẾ </Divider>
               <Row gutter={16}>
                 <Col xs={24} md={6}>
@@ -204,7 +204,7 @@ function Home(props) {
 
 
           <Row gutter={16} >
-            <Col xs={24} md={{ span: 18, offset: 3 }} style={{ background: 'white', paddingBottom: '8px' }}>
+            <Col xs={24} md={{ span: 18, offset: 3 }} style={{ background: 'white', paddingBottom: '8px', boxShadow: '0 10px 10px 0px #8a8484' }}>
               <Divider orientation="left" style={{ borderTopColor: '#85a1b2', borderTopWidth: '3px' }}> TIN TỨC - SỰ KIỆN </Divider>
               <Row gutter={16}>
                 <Col xs={24} md={6}>
@@ -256,19 +256,13 @@ function Home(props) {
 
 
           <Row gutter={16} >
-            <Col xs={24} md={{ span: 18, offset: 3 }} style={{ background: 'white', paddingBottom: '8px' }}>
+            <Col xs={24} md={{ span: 18, offset: 3 }} style={{ background: 'white', paddingBottom: '8px', boxShadow: '0 10px 10px 0px #8a8484' }}>
               <Divider orientation="left" style={{ borderTopColor: '#85a1b2', borderTopWidth: '3px' }}> LIÊN HỆ </Divider>
               <Row gutter={16}>
                 <Col xs={24} md={{ span: 8 }}>
                     <div className="mapouter">
                       <div className="gmap_canvas">
-                        <iframe
-                          title='ggmap'
-                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5473.4312217937295!2d105.81875634683443!3d21.028871598083633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab76ab560c29%3A0x253637caebea1353!2zQ-G7pWMgUXXhuqNuIEzDvSBExrDhu6Nj!5e0!3m2!1sen!2sus!4v1625208074683!5m2!1sen!2sus"
-                          height="300px"
-                          width="100%"
-                          allowFullScreen=""
-                          loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/d/embed?mid=1MupBLqSnb6E33rKIMEUQ_DRkjHMAUOVZ&hl=en" width="100%" height="300px" loading="lazy"></iframe>
                         </div>
                       </div>
                 </Col>
@@ -304,6 +298,7 @@ function Home(props) {
 
 
 
+          <br />
         </section>
       </div>
     </React.Fragment>
