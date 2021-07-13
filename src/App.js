@@ -8,6 +8,7 @@ import logo from './assets/logo.png'
 import Home from './pages/home'
 import Home2 from './pages/home2'
 import Home1 from './pages/home1'
+import Home3 from './pages/home3'
 import Detail from './pages/detail'
 import News from './pages/news'
 import NoMatch from './pages/NoMatch'
@@ -55,6 +56,9 @@ function App() {
             <Route exact path="/1" name="Home1" render={(props) => (
               <Header menus={menus} computedMatch={props.computedMatch}><Home1 menus={menus} /></Header>
             )} />
+            <Route exact path="/3" name="Home3" render={(props) => (
+              <Header menus={menus} computedMatch={props.computedMatch}><Home3 menus={menus} /></Header>
+            )} />
             <Route exact path="/2/detail" name="Detail" render={(props) => (
               <Header menus={menus} computedMatch={props.computedMatch}><Detail menus={menus} /></Header>
             )} />
@@ -94,7 +98,7 @@ function Header({ menus, children, match }) {
   return (
     <React.Fragment>
       <Menu onClick={handleClick} selectedKeys={[match?.params?.category || 'home']} mode="horizontal">
-          <Menu.Item onClick={() => history.push('/')} key='logo' icon={<img style={{ maxWidth: '50px' }} src={logo} alt='logo' />} style={{ background: 'yellow' }}>
+          <Menu.Item onClick={() => history.push('/')} key='logo' icon={<img style={{ maxWidth: '50px' }} src={logo} alt='logo' />}>
             <b>CỤC QUẢN LÝ Y, DƯỢC CỔ TRUYỀN</b>
           </Menu.Item>
           <Menu.Item key="home" onClick={() => history.push('/')}>
