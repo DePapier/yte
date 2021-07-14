@@ -21,7 +21,7 @@ function Section5() {
         </Row>
         <br />
         <Row>
-          <Col xs={24} md={{ span: 18, offset: 3 }}>
+          <Col xs={24} md={{ span: 18, offset: 3 }} className='linkw'>
             {
               webLink.map((e) => <img key={e.id} src={e.linkImage} alt={e.title} />)
             }
