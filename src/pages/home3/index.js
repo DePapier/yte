@@ -63,8 +63,8 @@ function Home(props) {
       <div className='home-3' id='intro'>
 
         <section className='h3-trans'>
-        <Anchor style={{ display: 'flex' }}>
-          <Link href="#intro" title="Giới thiệu" />
+        <Anchor style={{ display: 'flex', textAlign: 'left' }}>
+          <Link style={{ color: 'white' }} href="#intro" title="Giới thiệu" />
           <Link href="#hot" title="Thông báo" />
           <Link href="#news" title="Tin Tức" />
           <Link href="#linkweb" title="Website liên kết" />
@@ -287,27 +287,27 @@ function Home(props) {
                         </div>
                   </Col>
                   <Col xs={24} md={{ span: 16  }} style={{ textAlign: 'left'}}>
-                    <h4> Yêu cầu hỗ trợ </h4>
+                    <h4 style={{ color: 'white' }}> Yêu cầu hỗ trợ </h4>
                     <Space direction="vertical">
-                      <Text>
+                      <Text style={{ color: 'white' }}>
                       Mọi yêu cầu , thắc mắc cần hỗ trợ vui lòng liên hệ với chúng tôi qua  thông tin sau:
                       </Text>
-                      <Text>
+                      <Text style={{ color: 'white' }}>
                       Điện thoại: 04 6273 2247 - Số Fax: (04)6273 3338 Email: ydct@moh.gov.vn
                       </Text>
                     </Space>
                     <br />
                     <br />
                     <br />
-                    <h4> Trụ sở chính </h4>
+                    <h4 style={{ color: 'white' }}> Trụ sở chính </h4>
                     <Space direction="vertical">
-                      <Text>
+                      <Text style={{ color: 'white' }}>
                       Địa chỉ: 138A Giảng Võ - Ba Đình - Hà Nội
                       </Text>
-                      <Text>
+                      <Text style={{ color: 'white' }}>
                       Cơ quan chủ quản: Bộ Y tế.
                       </Text>
-                      <Text>
+                      <Text style={{ color: 'white' }}>
                       Chịu trách nhiệm: PGS.TS Nguyễn Thế Thịnh - Cục trưởng Cục quản lý Y, Dược Cổ truyền
                       </Text>
                     </Space>

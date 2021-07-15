@@ -1,7 +1,7 @@
 .home-3 {
   min-height: calc(100vh - 50px);
-  /* background-image: url('../../assets/bg.jpg'); */
-  background-color: rgb(207, 248, 246);
+  background-image: linear-gradient(to right, rgb(96, 108, 136), rgb(63, 76, 107));
+  /* background-color: rgb(207, 248, 246); */
 }
 .h3-trans {
   height: calc(100vh - 50px);
@@ -24,7 +24,7 @@
 }
 .h3-trans-1 {
   height: calc(100vh);
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -33,8 +33,11 @@
 
 }
 .home31 {
-  margin-top: 80px;
+  margin-top: 30px;
   text-align: justify;
+}
+.ant-anchor-link-title {
+  color: white;
 }
 .backtop-3 {
   width: 40px;
