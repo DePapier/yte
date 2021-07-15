@@ -210,7 +210,7 @@ function Home(props) {
                 <Col xs={24} md={{ span: 8 }}>
                     <div className="mapouter">
                       <div className="gmap_canvas">
-                          <iframe src="https://www.google.com/maps/d/embed?mid=1MupBLqSnb6E33rKIMEUQ_DRkjHMAUOVZ&hl=en" width="100%" height="300px" loading="lazy"></iframe>
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5473.4312217937295!2d105.81875634683443!3d21.028871598083633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab76ab560c29%3A0x253637caebea1353!2zQ-G7pWMgUXXhuqNuIEzDvSBExrDhu6Nj!5e0!3m2!1sen!2sus!4v1625208074683!5m2!1sen!2sus" width="100%" height="300px" loading="lazy"></iframe>
 
                         </div>
                       </div>

@@ -25,7 +25,7 @@ function Section2(props) {
               props.menus && props.menus.filter((e) => e.urlName === 'hoat-dong')[0] &&
               props.menus.filter((e) => e.urlName === 'hoat-dong')[0]
               .submenu.map((e) =>
-                <Col xs={24} md={8} key={e.id}>
+                <Col xs={24} md={8} key={e.id} style={{ marginBottom: '10px' }}>
                   <Card
                     hoverable
                     style={{ maxWidth: '100%' }}
